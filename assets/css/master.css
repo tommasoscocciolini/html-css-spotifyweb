@@ -1,0 +1,72 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  background-color: #141922;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 160px;
+}
+
+main{
+  height: calc(100vh - 100px - 100px);
+  overflow-y: auto;
+
+  padding-left: 160px;
+}
+
+main h1{
+  margin: 20px;
+}
+
+main #recently,
+main #creato-per-te{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+main div.card{
+  width: 150px;
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+main div.card img{
+  max-width: 100%;
+}
+
+main div.card span{
+  display: block;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+footer{
+  height: 100px;
+}
