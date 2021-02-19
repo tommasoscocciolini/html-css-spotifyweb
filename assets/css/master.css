@@ -2,25 +2,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 header{
-  background-color: #141922;
+  background-color: #080B12;
   height: 100px;
   display: flex;
   justify-content: flex-end;
-  margin-left: 160px;
+  margin-left: 250px;
 }
 
 main{
   height: calc(100vh - 100px - 100px);
   overflow-y: auto;
-
-  padding-left: 160px;
+  background-color: #141922;
+  color: #ffffff;
+  padding-left: 250px;
 }
 
-main h1{
+main h2,
+main h4{
   margin: 20px;
+}
+
+main h4{
+  font-size: .8em;
+  color: grey;
+  margin-top: -10px;
 }
 
 main #recently,
@@ -31,8 +40,12 @@ main #creato-per-te{
   align-items: flex-start;
 }
 
-main div.card{
+main div.card,
+main div.card-group{
   width: 150px;
+  height: 150px;
+  min-width: 150px;
+  max-width: 150px;
   margin: 20px;
   display: flex;
   justify-content: flex-start;
@@ -40,33 +53,52 @@ main div.card{
 }
 
 main div.card img{
-  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
-main div.card span{
+main div.card-group img{
+  width: 50%;
+  height: 50%;
+}
+
+main div.card span,
+main div.card-group span{
   display: block;
+  margin-top: 10px;
+}
+
+div.card img:hover,
+div.card-group:hover{
+  opacity: .2;
 }
 
 .sidenav {
   height: 100%;
-  width: 160px;
+  width: 250px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: black;
   overflow-x: hidden;
   padding-top: 20px;
 }
 
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding-left: 20px;
+  padding-top: 15px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1.1em;
   color: #818181;
   display: block;
 }
 
+.sidenav a i{
+ padding-right: 10px;
+}
+
 footer{
   height: 100px;
+  background-color: #282828;
 }
