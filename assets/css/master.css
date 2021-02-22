@@ -128,7 +128,7 @@ div.card-group:hover{
 }
 
 .sidenav {
-  height: 100%;
+  height: calc(100% - 100px);
   width: 250px;
   position: fixed;
   z-index: 1;
@@ -138,6 +138,17 @@ div.card-group:hover{
   overflow-x: hidden;
   overflow-y: auto;
   padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav img{
+  max-width: 50%;
+  height: auto;
+}
+
+.bottom-nav {
+  align-self: flex-end;
 }
 
 .sidenav-small {
@@ -156,7 +167,7 @@ div.card-group:hover{
 
 .sidenav a,
 .sidenav-small a {
-  padding-left: 20px;
+  padding-left: 10px;
   padding-top: 15px;
   text-decoration: none;
   font-size: 1.1em;
@@ -182,13 +193,14 @@ div.card-group:hover{
 footer{
   height: 100px;
   background-color: #282828;
-  margin-left: 250px;
   color: #ffffff;
+  display: flex;
 }
 
 footer div.container-flex{
   display: flex;
   height: 100%;
+  width: 25%;
   margin-left: 10px;
   justify-content: flex-start;
   align-items: center;
@@ -197,6 +209,25 @@ footer div.container-flex{
 footer div.container-flex span,
 footer div.container-flex p{
   margin-left: 10px;
+}
+footer div.container-flex-center
+{
+  display: flex;
+  height: 100%;
+  width: 50%;
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer div.container-flex-end{
+  display: flex;
+  height: 100%;
+  width: 25%;
+  margin-left: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 @media all and (max-width:768px) {
