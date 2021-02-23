@@ -8,19 +8,21 @@
 header{
   background-color: #080B12;
   height: 100px;
-  width: calc(100vw - 250px);
+  width: calc(100vw - 200px);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-left: 250px;
+  margin-left: 200px;
   position: fixed;
-  line-height: 100px;
+  /* line-height: 100px; */
+  z-index: 1;
+  top: 0;
+  right: 0;
 }
 
 header button{
   border-radius: 20px;
   padding: 10px 40px;
-  align-items: center;
   height: 40%;
   margin-right: 10px;
   background-color: rgba(255, 0, 0, 0);
@@ -28,11 +30,11 @@ header button{
 }
 
 main{
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   overflow-y: auto;
   background-color: #141922;
   color: #ffffff;
-  padding-left: 250px;
+  padding-left: 200px;
   padding-top: 100px;
 }
 
@@ -48,10 +50,10 @@ main h4{
 ul.ul-menu li{
   display: inline;
   list-style: none;
-  padding-right: 20px;
+  padding-right: 10px;
   padding-left: 10px;
   font-size: .7em;
-  line-height: 50px;
+  /* line-height: 50px; */
 }
 
 .ul-menu li a{
@@ -79,25 +81,23 @@ main #pop-artist{
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-bottom: 50px;
 }
 
 main div.card,
 main div.card-group{
-  width: 200px;
-  height: 200px;
-  min-width: 200px;
-  max-width: 200px;
-  margin: 20px;
+  max-width: calc(100%/6 - 20px);
+  min-width: 100px;
+  margin: 10px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 main div.card img{
   min-width: 100%;
-  min-height: 100%;
+  /* min-height: 100%; */
 }
 
 main div.card-group img{
@@ -108,7 +108,7 @@ main div.card-group img{
 main div.card span,
 main div.card-group span{
   display: block;
-  margin-top: 20px;
+  margin-top: 5px;
   width: 100%;
 }
 
@@ -116,7 +116,14 @@ main div.card p,
 main div.card-group p{
   font-size: .9em;
   color: lightgrey;
+  display: inline-block;
 }
+
+.artist-name{
+  color: lightgrey;
+  font-size: .8em;
+}
+
 
 div.card img:hover,
 div.card-group:hover{
@@ -127,24 +134,43 @@ div.card-group:hover{
   border-radius: 50%;
 }
 
-.sidenav {
-  height: calc(100% - 100px);
-  width: 250px;
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 80px);
+  width: 200px;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   background-color: black;
   overflow-x: hidden;
-  overflow-y: auto;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
+  overflow-y: hidden;
 }
 
-.sidenav img{
+.sidebar > div {
+  width: 100%;
+}
+
+.playlist{
+}
+
+.profile{
+  margin-top: auto;
+}
+
+.sidebar img{
   max-width: 50%;
   height: auto;
+  margin-bottom: 10px;
+  margin-left: 8px;
+  margin-top: 10px;
+}
+
+.sidebar .playlists ul.nav{
+  overflow-y: auto;
+  height: 30vh;
 }
 
 .bottom-nav {
@@ -152,7 +178,7 @@ div.card-group:hover{
 }
 
 .sidenav-small {
-  height: 100%;
+  height: calc(100% - 80px);
   width: 50px;
   position: fixed;
   z-index: 1;
@@ -163,9 +189,10 @@ div.card-group:hover{
   overflow-y: auto;
   padding-top: 20px;
   display: none;
+  max-height: 100%;
 }
 
-.sidenav a,
+.sidebar a.side-element,
 .sidenav-small a {
   padding-left: 10px;
   padding-top: 15px;
@@ -176,62 +203,99 @@ div.card-group:hover{
   width: 100%;
 }
 
-.sidenav a i,
+.sidebar h3.side-element{
+  padding-left: 10px;
+  margin-top: 20px;
+}
+
+.sidebar a.side-element i,
 .sidenav-small a i{
  padding-right: 10px;
 }
 
-.sidenav a i.fa-plus-square{
-  font-size: 2.2em;
+.sidebar a.side-element i.fa-plus-square{
+  font-size: 2.5em;
 }
 
-.sidenav img{
-  margin-left: 10px;
-  margin-bottom: 10px;
+.profile-name{
+  padding: 5px;
+  padding-top: 0px;
 }
+/* .container-side-flex,
+.container-side-flex2{
+  display: flex;
+  flex-wrap: wrap;
+}
+.container-side-flex2{
+
+} */
 
 footer{
-  height: 100px;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   background-color: #282828;
   color: #ffffff;
   display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+  justify-content: space-between;
+  z-index: 2;
 }
 
 footer div.container-flex{
   display: flex;
   height: 100%;
-  width: 25%;
+  /* width: calc(100%/4 - 10px); */
+  flex-basis: 230px;
   margin-left: 10px;
   justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  flex-grow: 1;
 }
 footer div.container-flex span,
 footer div.container-flex p{
   margin-left: 10px;
 }
-footer div.container-flex-center
-{
+footer div.container-flex-center{
   display: flex;
   height: 100%;
-  width: 50%;
-  margin-left: 10px;
+  /* width: 50%; */
+  flex-basis: 300px;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  flex-grow: 2;
 }
 footer div.container-flex-end{
   display: flex;
   height: 100%;
-  width: 25%;
-  margin-left: 10px;
+  /* width: calc(100%/4 - 10px); */
+  flex-basis: 230px;
   justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  max-width: 25%;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+footer div.container-flex-end i,
+footer div.container-flex-end input,
+footer div.container-flex-center i{
+  margin: 5px;
 }
 
+footer div.container-flex-end input{
+}
+
+
 @media all and (max-width:768px) {
-  .sidenav{
+  .sidebar{
     width: 100px;
     display: none;
   }
@@ -257,6 +321,15 @@ footer div.container-flex-end{
     margin-left: 0;
   }
 
+  main div.card,
+  main div.card-group{
+    max-width: 100px;
+  }
+
+  header button{
+    font-size: .6em;
+  }
+
   main{
     padding-left: 50px;
   }
@@ -265,9 +338,9 @@ footer div.container-flex-end{
     margin-left: 50px;
   }
   footer{
-    height: 100px;
+    height: 80px;
     background-color: #282828;
-    margin-left: 50px;
     color: #ffffff;
   }
+
 }
