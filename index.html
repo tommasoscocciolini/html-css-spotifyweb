@@ -230,12 +230,14 @@
     <!-- flex con dentro col per ridimension. auto? -->
     <div class="container-flex">
       <img src="https://www.impattosonoro.it/wp-content/themes/impatto-theme/images/81TnWHafWdL._SL1448_.jpg" alt="">
-      <div style="margin-right:50px" class="flex-col">
+      <div  class="flex-col">
         <span><b>JoeJoe</b></span>
         <p>Nome</p>
       </div>
-      <i class="far fa-heart"></i>
-      <i style="margin-left: 5px;" class="far fa-folder"></i>
+      <div class="flex-col-icon">
+        <i class="far fa-heart"></i>
+        <i style="margin-left: 5px;" class="far fa-folder"></i>
+      </div>
     </div>
     <!-- <div class="container-flex-center">
       <i class="fas fa-random"></i>
@@ -246,21 +248,21 @@
     </div> -->
     <div class="container-flex-center">
       <div class="flex-cen-top">
-        <i class="fas fa-random"></i>
-        <i class="fas fa-step-backward"></i>
-        <i style="font-size:2em;" class="far fa-play-circle"></i>
-        <i class="fas fa-step-forward"></i>
-        <i class="fas fa-redo-alt"></i>
+        <a href="#"><i class="fas fa-random"></i></a>
+        <a href="#"><i class="fas fa-step-backward"></i></a>
+        <a href="#"><i style="font-size:2em;" class="far fa-play-circle"></i></a>
+        <a href="#"><i class="fas fa-step-forward"></i></a>
+        <a href="#"><i class="fas fa-redo-alt"></i></a>
       </div>
       <div class="flex-cen-bot">
-        <span>00:25</span>
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        <span>4:29</span>
+        <span style="margin-right:10px;">00:25</span>
+        <input type="range" min="1" max="100" value="20" class="slider" id="myRange">
+        <span style="margin-left:10px;">4:29</span>
       </div>
     </div>
     <div class="container-flex-end">
-      <i class="fas fa-list"></i>
-      <i class="fas fa-desktop"></i>
+      <a href="#"> <i class="fas fa-list"></i></a>
+      <a href="#"> <i class="fas fa-desktop"></i></a>
       <i class="fas fa-volume-up"></i>
       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
     </div>

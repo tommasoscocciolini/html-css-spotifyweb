@@ -328,10 +328,15 @@ footer div.container-flex p{
   margin-left: 10px;
 }
 
+.flex-col-icon{
+  margin-left: 30px;
+}
+
 footer div.container-flex-center{
   display: flex;
   flex-direction:column;
   height: 100%;
+  flex-basis: 350px;
   flex-grow: 2;
 }
 
@@ -339,17 +344,19 @@ footer div.container-flex-center .flex-cen-top{
   display: flex;
   height: 75%;
   /* width: 50%; */
-  flex-basis: 300px;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+}
 
+footer div.container-flex-center .flex-cen-top a i{
+  color: #ffffff;
 }
 
 footer div.container-flex-center .flex-cen-bot{
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 footer div.container-flex-center .flex-cen-bot input{
@@ -373,9 +380,22 @@ footer div.container-flex-end input,
 footer div.container-flex-center i{
   margin: 5px;
 }
+
+.container-flex-end a i{
+  color: #ffffff;
+}
+
 footer div.container-flex-end input{
 }
 
+
+@media all and (max-width:992px){
+  footer div.container-flex-center .flex-cen-bot{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+}
 
 @media all and (max-width:567px) {
   .sidebar{
@@ -394,10 +414,6 @@ footer div.container-flex-end input{
   }
   .sidenav-small a i{
     font-size: 25px;
-
-  }
-  .sidenav-small a{
-
   }
   .sidenav-small img{
     margin-left: 0;
@@ -415,7 +431,6 @@ footer div.container-flex-end input{
     max-width: 40%;
     min-width: 100px;
   }
-
   main div.card span,
   main div.card-group span {
     font-size: .8em;
@@ -455,7 +470,8 @@ footer div.container-flex-end input{
     flex-shrink: 2;
   }
 
-  .container-flex .flex-col{
+
+  footer .container-flex .flex-col{
     margin-left: -15px;
   }
 
@@ -469,7 +485,13 @@ footer div.container-flex-end input{
 
   footer div.container-flex-center{
     flex-basis: 200px;
-    font-size: .6em;
+    font-size: .7em;
+  }
+
+  footer div.container-flex-center .flex-cen-bot{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 15px;
   }
 
   footer div.container-flex-end{
@@ -479,4 +501,44 @@ footer div.container-flex-end input{
   footer div.container-flex-end input{
     display: none;
   }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+      overflow: hidden;
+      width: 100px;
+      -webkit-appearance: none;
+      background-color: rgba(255,255,255,0.4);
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      color: #13bba4;
+      margin-top: -1px;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+      width: 10px;
+      -webkit-appearance: none;
+      height: 10px;
+      cursor: ew-resize;
+      background: #434343;
+      box-shadow: -80px 0 0 80px #ffffff;
+    }
+
+}
+/** FF/
+input[type="range"]::-moz-range-progress {
+  background-color: #43e5f7;
+}
+input[type="range"]::-moz-range-track {
+  background-color: #9a905d;
+}
+/ IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #43e5f7;
+}
+input[type="range"]::-ms-fill-upper {
+  background-color: #9a905d;
 }
