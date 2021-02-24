@@ -91,7 +91,7 @@ main #pop-artist{
 main div.card ,
 main div.card-group{
   max-width: calc(100%/6 - 20px);
-  min-width: 100px;
+  min-width: 130px;
   margin: 10px;
   display: flex;
   /* justify-content: flex-start; */
@@ -148,6 +148,13 @@ main div.card-group span{
   display: block;
   margin-top: 5px;
   width: 100%;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+main div.card span.artist-name,
+main div.card-group span.artist-name{
+  font-weight: normal;
 }
 
 main div.card p,
@@ -246,8 +253,7 @@ div.rounded{
   margin-top: 20px;
 }
 
-.sidebar a.side-element i,
-.sidenav-small a i{
+.sidebar a.side-element i{
  padding-right: 10px;
 }
 
@@ -288,7 +294,7 @@ div.rounded{
 
 footer{
   height: 80px;
-  width: 100%;
+  width: 100VW;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -307,7 +313,7 @@ footer div.container-flex{
   height: 100%;
   /* width: calc(100%/4 - 10px); */
   flex-basis: 230px;
-  margin-left: 10px;
+  padding-left: 10px;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
@@ -321,16 +327,35 @@ footer div.container-flex span,
 footer div.container-flex p{
   margin-left: 10px;
 }
+
 footer div.container-flex-center{
   display: flex;
+  flex-direction:column;
   height: 100%;
+  flex-grow: 2;
+}
+
+footer div.container-flex-center .flex-cen-top{
+  display: flex;
+  height: 75%;
   /* width: 50%; */
   flex-basis: 300px;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  flex-grow: 2;
+
 }
+
+footer div.container-flex-center .flex-cen-bot{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+footer div.container-flex-center .flex-cen-bot input{
+  width: 60%;
+}
+
 footer div.container-flex-end{
   display: flex;
   height: 100%;
@@ -369,19 +394,41 @@ footer div.container-flex-end input{
   }
   .sidenav-small a i{
     font-size: 25px;
-    padding-top: 5px;
+
   }
   .sidenav-small a{
-    padding-left: 7px;
-    padding-top: 5px;
+
   }
   .sidenav-small img{
     margin-left: 0;
   }
 
+  header button{
+    transform: scale(.8);
+  }
+  header button:hover{
+    transform: scale(1);
+  }
+
   main div.card,
   main div.card-group{
     max-width: 40%;
+    min-width: 100px;
+  }
+
+  main div.card span,
+  main div.card-group span {
+    font-size: .8em;
+  }
+  main h2{
+    font-size: 1.1em;
+  }
+  main h4{
+    font-size: 0.9em;
+  }
+
+  .ul-menu li a{
+    font-size: .8em;
   }
 
   header button{
@@ -401,10 +448,11 @@ footer div.container-flex-end input{
     color: #ffffff;
   }
 
-  footer .container-flex{
-    flex-basis: 80px;
-    font-size: .8em;
-    margin-left: 0;
+  footer div.container-flex{
+    flex-basis: 100px;
+    font-size: .7em;
+    padding-left: 0;
+    flex-shrink: 2;
   }
 
   .container-flex .flex-col{
@@ -421,7 +469,7 @@ footer div.container-flex-end input{
 
   footer div.container-flex-center{
     flex-basis: 200px;
-    font-size: .8em;
+    font-size: .6em;
   }
 
   footer div.container-flex-end{
