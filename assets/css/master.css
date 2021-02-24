@@ -22,11 +22,16 @@ header{
 
 header button{
   border-radius: 20px;
+  border-color: #ffffff;
   padding: 10px 40px;
   height: 40%;
-  margin-right: 10px;
-  background-color: rgba(255, 0, 0, 0);
+  margin-right: 15px;
+  background-color: rgba(0, 0, 0, 0);
   color: #ffffff;
+}
+
+header button:hover{
+  transform: scale(1.1);
 }
 
 main{
@@ -221,15 +226,14 @@ div.rounded{
   background-color: black;
   overflow-x: hidden;
   overflow-y: auto;
-  padding-top: 20px;
+  /* padding-top: 20px; */
   display: none;
   max-height: 100%;
 }
 
 .sidebar a.side-element,
 .sidenav-small a {
-  padding-left: 10px;
-  padding-top: 15px;
+  padding: 8px;
   text-decoration: none;
   font-size: 1.1em;
   color: #818181;
@@ -238,7 +242,7 @@ div.rounded{
 }
 
 .sidebar h3.side-element{
-  padding-left: 10px;
+  padding: 10px;
   margin-top: 20px;
 }
 
@@ -251,9 +255,27 @@ div.rounded{
   font-size: 2.5em;
 }
 
-.profile-name{
-  padding: 5px;
-  padding-top: 0px;
+.profile{
+  padding: 10px;
+}
+
+.profile span a{
+  color: #818181;
+  text-decoration: none;
+  font-size: .9em;
+  line-height: 2;
+}
+
+.profile span:hover a{
+  color: #ffffff;
+}
+
+.sidebar .playlists ul li a:hover,
+.sidebar .playlists .create-playlist a:hover,
+.sidenav-small a:hover{
+  color: #ffffff;
+  font-size: 1.2em;
+  border-left: 2px solid green;
 }
 /* .container-side-flex,
 .container-side-flex2{
@@ -273,6 +295,7 @@ footer{
   background-color: #282828;
   color: #ffffff;
   display: flex;
+  flex-wrap: nowrap;
   overflow-y: auto;
   overflow-x: hidden;
   justify-content: space-between;
@@ -288,8 +311,11 @@ footer div.container-flex{
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  flex-shrink: 0;
   flex-grow: 1;
+  max-width: 25%;
+}
+footer div.container-flex img{
+  max-height: 60px;
 }
 footer div.container-flex span,
 footer div.container-flex p{
@@ -303,7 +329,6 @@ footer div.container-flex-center{
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  flex-shrink: 0;
   flex-grow: 2;
 }
 footer div.container-flex-end{
@@ -311,11 +336,11 @@ footer div.container-flex-end{
   height: 100%;
   /* width: calc(100%/4 - 10px); */
   flex-basis: 230px;
+  margin-right: 10px;
   justify-content: flex-end;
   align-items: center;
   flex-wrap: nowrap;
   max-width: 25%;
-  flex-shrink: 0;
   flex-grow: 1;
 }
 footer div.container-flex-end i,
@@ -323,7 +348,6 @@ footer div.container-flex-end input,
 footer div.container-flex-center i{
   margin: 5px;
 }
-
 footer div.container-flex-end input{
 }
 
@@ -357,7 +381,7 @@ footer div.container-flex-end input{
 
   main div.card,
   main div.card-group{
-    max-width: 100px;
+    max-width: 40%;
   }
 
   header button{
@@ -377,4 +401,34 @@ footer div.container-flex-end input{
     color: #ffffff;
   }
 
+  footer .container-flex{
+    flex-basis: 80px;
+    font-size: .8em;
+    margin-left: 0;
+  }
+
+  .container-flex .flex-col{
+    margin-left: -15px;
+  }
+
+  footer .container-flex i{
+    display: none;
+  }
+
+  footer .container-flex img{
+    transform: scale(.7);
+  }
+
+  footer div.container-flex-center{
+    flex-basis: 200px;
+    font-size: .8em;
+  }
+
+  footer div.container-flex-end{
+    flex-basis: 80px;
+    font-size: .8em;
+  }
+  footer div.container-flex-end input{
+    display: none;
+  }
 }
