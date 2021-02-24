@@ -92,12 +92,14 @@ main div.card ,
 main div.card-group{
   max-width: calc(100%/6 - 20px);
   min-width: 130px;
-  margin: 10px;
   display: flex;
   /* justify-content: flex-start; */
   flex-wrap: wrap;
-  margin-bottom: 10px;
   text-align: center;
+}
+
+.card, .card-group{
+  margin: 10px;
 }
 
 .card .img-hover,
@@ -108,8 +110,8 @@ main div.card-group{
 }
 
 .img-hover .overlay{
-  width: 100%;
-  height: 100%;
+  width: 101%;
+  height: 101%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -272,6 +274,10 @@ div.rounded{
   line-height: 2;
 }
 
+#profile-name{
+  color: #ffffff;
+}
+
 .profile span:hover a{
   color: #ffffff;
 }
@@ -312,12 +318,12 @@ footer div.container-flex{
   display: flex;
   height: 100%;
   /* width: calc(100%/4 - 10px); */
-  flex-basis: 230px;
+  /* flex-basis: 230px; */
   padding-left: 10px;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   max-width: 25%;
 }
 footer div.container-flex img{
@@ -336,8 +342,9 @@ footer div.container-flex-center{
   display: flex;
   flex-direction:column;
   height: 100%;
-  flex-basis: 350px;
-  flex-grow: 2;
+  /* flex-basis: 350px; */
+  /* flex-grow: 2; */
+  width: 50%;
 }
 
 footer div.container-flex-center .flex-cen-top{
@@ -367,13 +374,13 @@ footer div.container-flex-end{
   display: flex;
   height: 100%;
   /* width: calc(100%/4 - 10px); */
-  flex-basis: 230px;
+  /* flex-basis: 230px; */
   margin-right: 10px;
   justify-content: flex-end;
   align-items: center;
   flex-wrap: nowrap;
   max-width: 25%;
-  flex-grow: 1;
+  /* flex-grow: 1; */
 }
 footer div.container-flex-end i,
 footer div.container-flex-end input,
